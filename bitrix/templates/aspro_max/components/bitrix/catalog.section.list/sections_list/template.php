@@ -24,7 +24,11 @@
 									<?//old icon?>
 									<?/*\Aspro\Functions\CAsproMaxItem::showSectionImg($arParams, $arItems, $bIcons);*/?>
 									<?// use detail picture?>
-									<img src="<?=($arItems["PICTURE"]["SAFE_SRC"]);?>">
+									<?if($arItems["PICTURE"]["SAFE_SRC"]):?> 
+										<img src=<?=($arItems["PICTURE"]["SAFE_SRC"]);?>>
+									<?else:?>
+									<img src="/upload/placeholder.png">
+									<?endif;?>
 								</td>
 							<?endif;?>
 							<td class="section_info toggle">
